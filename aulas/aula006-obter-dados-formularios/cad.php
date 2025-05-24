@@ -21,8 +21,9 @@
                 <div class="col-md-auto">
                     <div class="mb-3">
                         <?php
-                            $nome = $_GET['nome'];
-                            $sobrenome = $_GET['sobrenome'];
+                            # Pode-se usar o $_POST (pegar post) ou $_REQUEST (pegar get ou post)
+                            $nome = $_GET['nome'] ?? 'Srº'; 
+                            $sobrenome = $_GET['sobrenome'] ?? 'Anomimo';
                             echo "<p>Olá, <strong>$nome $sobrenome</strong>, seja bem vindo!</p>";
                         ?>
                     </div>
