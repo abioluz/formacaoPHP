@@ -7,11 +7,20 @@
 </head>
 <body>
     <?php 
+
         $nome = "Abioluz Robson";
         $sobrenome = "Behrend";
+
+        $nome_sobrenome = $nome . " " . $sobrenome; 
+
+        $idade = 39; 
+        $peso = 98.6;
+        $casado = false;
+
         const PAIS = "Brasil"; # constantes
 
-        echo "Muito prazer $sobrenome, $nome! Você mora no " . PAIS;
+        print "Muito \nprazer $sobrenome, $nome! Você mora no " . PAIS;
+        echo "Muito prazer $nome_sobrenome! Você mora no " . PAIS;
     ?>
 </body>
 </html>
