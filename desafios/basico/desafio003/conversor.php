@@ -22,12 +22,19 @@
 
     <main class="container-fluid text-center my-5">
         <?php
+            $resposta = file_get_contents('https://economia.awesomeapi.com.br/last/USD-BRL');
+            $resposta = json_decode($resposta, true);
             $valor = (float) $_GET["valor"] ?? 0;
-            $dollar_cotacao = 5.41;
-            $dollar = round($valor * $dollar_cotacao, 2);
+            $dollar_cotacao = (float) $resposta["USDBRL"]['bid'];
+            $data_cotacao = (string) $resposta['USDBRL']['create_date'];
+            $dollar = $valor / $dollar_cotacao;
+
+            $valor = number_format($valor, 2, ",", ".");
+            $dollar = number_format($dollar, 2, ",", ".");
+            $dollar_cotacao = number_format($dollar_cotacao, 4, ",", ".");
 
             echo "<p>Seus R$ $valor equivalem a US$ $dollar</p>";
-            echo "<p><strong>Cotação fixa de R$ $dollar_cotacao</strong> informada diariamente no código</p>";
+            echo "<p><strong>Cotação fixa de R$ $dollar_cotacao</strong> em $data_cotacao</p>";
         ?>
     </main>
 
