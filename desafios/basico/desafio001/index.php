@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     
-    <title>Document</title>
+    <title>Antecessor e Sucessor</title>
 </head>
 <body>
     <div class="container-fluid text-center">
@@ -18,11 +18,11 @@
         
         <section>
             <div class="row row-cols-3 justify-content-md-center">
-                <div class="col-md-auto">
+                <div class="col-md-auto card p-4 shadow">
                     <form action="desafio001.php" method="get">
                         <div class="mb-3">
                             <label for="numero" class="form-label">Número:</label>
-                            <input type="text" name="numero" id="idnumero" class="form-control">
+                            <input type="number" name="numero" id="idnumero" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
